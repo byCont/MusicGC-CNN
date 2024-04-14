@@ -1,0 +1,45 @@
+Music Genre Classification Using Convolutional Neural Network. 
+
+Algorithm / Model Used: Artificial Neural Networks Model(ANN Model).
+
+Training Accuracy:97%.
+Validation Accuracy: 89%.
+
+//Resultado de prediccion con BPM y tono (aun no funcional)
+
+@app.route("/submit", methods = ['GET', 'POST'])
+def get_output():
+	if request.method == 'POST':
+		audio_path = request.files['wavfile']
+		
+		# Cargar el archivo de audio original
+		original_audio = AudioSegment.from_file(audio_path)
+
+		primeros_20_segundos = original_audio[:20000]
+		# Cortar el audio a 30 segundos
+		audio_cortado = original_audio[20000:50000]  # 30 segundos (30000 milisegundos)
+		
+		# Guardar el fragmento de audio
+		fragmento_audio_path = "static/tests/fragmento_" + secure_filename(audio_path.filename)
+		audio_cortado.export(fragmento_audio_path, format="wav")
+
+		# Calcular los beats por minuto (BPM) del fragmento de audio
+		y, sr = librosa.load(fragmento_audio_path)
+		tempo, _ = librosa.beat.beat_track(y=y, sr=sr)
+
+		# Calcular el tono del fragmento de audio
+		chroma = librosa.feature.chroma_stft(y=y, sr=sr)
+		tonalidad_dominante = chroma.argmax(axis=0)
+
+		# Mapear los índices de tonalidad a notas musicales
+
+		# print(f'Tonalidad dominante: {tonalidad_en_notas}')
+
+		# Realizar la predicción en el fragmento de audio
+		predict_result = ANN_print_prediction(fragmento_audio_path)
+
+	return render_template("prediction.html", prediction=predict_result, audio_path=fragmento_audio_path, bpm=round(tempo, 1), tono=tonalidad_dominante)
+ 
+
+
+

@@ -1,0 +1,18 @@
+html, body, main {
+  font-family: 'Roboto',Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
+  /* background-color: #18222b; */
+  background-image: url("../images/bg/OrishaColor.jpg");
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.80);
+}
+
+#section_1 {
+  flex: 1;
+}
+

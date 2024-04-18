@@ -16,3 +16,6 @@ html, body, main {
   flex: 1;
 }
 
+.nav-link:hover {
+  color: #fff !important; /* Cambia el color del texto a blanco */
+}

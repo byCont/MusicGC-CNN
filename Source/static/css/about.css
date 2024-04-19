@@ -1,5 +1,10 @@
+@font-face {
+  font-family: Helvetica;
+  src: url(../fonts/HelveticaNowDisplay-Medium.woff);
+}
+
 html, body, main {
-  font-family: 'Roboto',system-ui, Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Helvetica', Roboto,system-ui, Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
   background-image: url("../images/bg/about.jpg");
   background-size: cover;
   background-attachment: fixed;

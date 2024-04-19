@@ -1,6 +1,10 @@
-html, body {
-  font-family: 'Roboto',system-ui, Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
-  /* background-color: #18222b; */
+@font-face {
+  font-family: Helvetica;
+  src: url(../fonts/HelveticaNowDisplay-Medium.woff);
+}
+
+html, body, main {
+  font-family: 'Helvetica', Roboto,system-ui, Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
   background-image: url("../images/bg/Prediction.jpg");
   background-size: cover;
   background-attachment: fixed;

@@ -64,13 +64,9 @@ def ANN_print_prediction(audio_path):
 def first():
 	return render_template('first.html')
     
-@app.route("/login")
-def login():
-	return render_template('index.html')  
-    
-@app.route("/index", methods=['GET'])
-def index():
-	return render_template("index.html")
+@app.route("/classify")
+def classify():
+	return render_template('classify.html')
 
 
 @app.route("/submit", methods = ['GET', 'POST'])
@@ -85,9 +81,9 @@ def get_output():
 
 	return render_template("prediction.html", prediction = predict_result, audio_path= img_path)
 
-@app.route("/chart")
-def chart():
-	return render_template('chart.html')     
+@app.route("/about")
+def about():
+	return render_template('about.html')     
  
 if __name__ =='__main__':
 	app.run(debug = True)

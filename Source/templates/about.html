@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+
+  <head>      
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <link rel="shortcut icon" href="../static/images/icon.png" type="image/x-icon">
+    <meta name="author" content="byDanielCont">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/css/about.css">
+
+    <title>Music Genre Classification Using Convolutional Neural Network</title>
+
+  </head>
+
+  <body>
+
+    <main>
+
+      <nav class="p-3">
+        <ul class="nav justify-content-center">
+          <li class="nav-item">
+            <a class="nav-link text-secondary text-opacity-75" href="{{url_for('first')}}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-secondary text-opacity-75" href="{{url_for('classify')}}">Classify</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-secondary text-white" href="{{url_for('about')}}">About</a>
+          </li>
+        </ul>
+      </nav>
+
+      <section class="m-5 row justify-content-center align-items-center" id="section_1"> 
+        <div class="col-sm-9 d-flex justify-content-center">
+            <div class="card" style="width: 30rem;">
+                <h2 class="text-black">Model Accuracy</h2>
+                <img src="../static/images/bg/Validation.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <p class="card-text">Some quick example text to on the card title and make up the bulk of the card's content.</p>
+                </div>
+            </div>
+        </div>
+      </section>
+
+      <section class="m-5 row justify-content-center align-items-center" id="section_1"> 
+        <div class="col-sm-9 d-flex justify-content-center">
+            <div class="card" style="width: 30rem;">
+                <h2 class="text-black">Model Loss</h2>
+                <img src="../static/images/bg/Loss.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+            </div>
+        </div>
+      </section>            
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+    </main>
+
+  </body>
+</html>

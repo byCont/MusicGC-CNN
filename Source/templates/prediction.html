@@ -21,10 +21,10 @@
             <a class="nav-link text-secondary text-opacity-75" href="{{url_for('first')}}">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-secondary text-opacity-77" href="{{url_for('login')}}">Classify</a>
+            <a class="nav-link text-secondary text-white" href="{{url_for('classify')}}">Classify</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-secondary text-opacity-75" href="{{url_for('chart')}}">About</a>
+            <a class="nav-link text-secondary text-opacity-75" href="{{url_for('about')}}">About</a>
           </li>
         </ul>
       </nav>
@@ -34,24 +34,22 @@
         <div class="container">
 
             <div class="container d-flex justify-content-center align-items-center">
-                <h2 class="text-white mb-5">Prediction</h1>
+                <h1 class="text-white mb-5">Prediction</h1>
             </div>     
               
                   {% if prediction %}        
                             
-              <div class="container d-flex justify-content-center align-items-center">   <audio controls>
+              <div class="p-5 container d-flex justify-content-center align-items-center">   <audio controls>
                 <source src="{{audio_path}}" type="audio/wav"></audio>
               </div>
-                                                                    
-            </br>
-            </br>  
-            <div class="text-white container d-flex justify-content-center align-items-center">
-                bpm={{bpm}}
-                tono={{tono}} 
-            </div>
-          
-            <div class="p-3 container d-flex justify-content-center align-items-center"><h3 class="btn btn-success" > Music genre is:  {{prediction}} </h3> </div>
-                          
+
+              <div class="p-3 container d-flex justify-content-center align-items-center"><h1 class="btn btn-outline-light"> Music genre is:  {{prediction}} </h1> </div>
+
+              <div class="mb-3 container d-flex justify-content-center align-items-center"> 
+                <h4 class="text-white">BPM:{{bpm}}</h4>
+                <h4 class="text-white">Tono:{{tono}}</h4>
+              </div>
+                        
               {% endif %}
         </div>       
 

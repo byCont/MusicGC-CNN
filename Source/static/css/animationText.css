@@ -41,10 +41,11 @@
   display: inline;
   float: left;
   margin: 0;
+  padding-left: 280px;
 }
 .content__container__list {
   margin-top: 0;
-  padding-left: 110px;
+  padding-left: 390px; /*mirar*/
   text-align: left;
   list-style: none;
   -webkit-animation-name: change;
@@ -53,6 +54,7 @@
   animation-name: change;
   animation-duration: 10s;
   animation-iteration-count: infinite;
+  color: #09f;
 }
 .content__container__list__item {
   line-height: 40px;

@@ -60,9 +60,9 @@ def ANN_print_prediction(audio_path):
     return predicted_class[0]
 
 @app.route("/")
-@app.route("/first")
-def first():
-	return render_template('first.html')
+@app.route("/home")
+def home():
+	return render_template('home.html')
     
 @app.route("/classify")
 def classify():

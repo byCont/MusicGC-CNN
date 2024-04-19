@@ -27,7 +27,7 @@
 .content__container:after, .content__container:before {
   position: absolute;
   top: 0;
-  color: #165da0a8;
+  color: #a05916a8;
   font-size: 42px;
   line-height: 40px;
   -webkit-animation-name: opacity;

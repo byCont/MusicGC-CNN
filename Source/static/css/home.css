@@ -17,14 +17,19 @@ html, body, main {
   flex-direction: column;
   background-color: rgba(0, 0, 0, 0.80);
 }
-/* main {
-  width: 100%;
-} */
-
-/* #section_1 {
-  flex: 1;
-} */
 
 .nav-link:hover {
   color: #fff !important; /* Cambia el color del texto a blanco */
+}
+
+#home {
+  transition: left 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+#classify {
+  left: 100%;
+  transition: left 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+#about {
+  left: 100%;
+  transition: left 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
 }

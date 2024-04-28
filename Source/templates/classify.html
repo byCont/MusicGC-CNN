@@ -17,7 +17,7 @@
   <body>
       <main>
 
-        <nav class="p-3">
+        <header class="p-3 animationContent">
           <ul class="nav justify-content-center">
             <li class="nav-item" id="home">
               <a class="nav-link text-secondary text-opacity-75" href="{{url_for('home')}}">Home</a>
@@ -29,13 +29,13 @@
               <a class="nav-link text-secondary text-opacity-75" href="{{url_for('about')}}">About</a>
             </li>
           </ul>
-        </nav>
+        </header>
 
-          <section class="p-5 container d-flex justify-content-center align-items-center">
-            <h1 class="text-white mb-5">Preview</h1>                    
+          <section class="p-5 container d-flex justify-content-center align-items-center animationContent">
+            <h1 class="text-white">Preview</h1>                    
           </section>
           
-          <div class="form m-0 row justify-content-center align-items-center" id="section_1">
+          <div class="form m-0 row justify-content-center align-items-center animationContent" id="section_1">
           
               <form action="/submit" method="POST" enctype="multipart/form-data" >
                       

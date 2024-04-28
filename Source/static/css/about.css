@@ -19,10 +19,26 @@ html, body, main {
   scrollbar-width: none;
 }
 
-/* #section_1 {
-  flex: 1;
-} */
+header{
+  font-size: 20px;
+}
 
 .nav-link:hover {
   color: #fff !important; /* Cambia el color del texto a blanco */
+}
+
+/* Content Animation */
+@keyframes scaleIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.animationContent{
+  animation: scaleIn 0.5s ease forwards;
 }

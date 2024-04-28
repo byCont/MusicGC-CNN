@@ -12,16 +12,47 @@ html, body, main {
   margin: 0;
   padding: 0;
   background-position: center;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; 
   display: flex;
   flex-direction: column;
   background-color: rgba(0, 0, 0, 0.80);
 }
 
-#section_1 {
+/* #section_1 {
   flex: 1;
+} */
+header{
+  font-size: 20px;
 }
 
 .nav-link:hover {
-  color: #fff !important;   
+  color: #fff !important; /* Cambia el color del texto a blanco */
+}
+
+#home {
+  transition: left 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+#classify {
+  left: 100%;
+  transition: left 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+#about {
+  left: 100%;
+  transition: left 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+/* Content Animation */
+@keyframes scaleIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.animationContent{
+  animation: scaleIn 0.5s ease forwards;
 }

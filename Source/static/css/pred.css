@@ -1,10 +1,10 @@
 @font-face {
-  font-family: Helvetica;
-  src: url(../fonts/HelveticaNowDisplay-Medium.woff);
+  font-family: Sohne-Buch;
+  src: url(../fonts/Sohne-Buch.woff);
 }
 
 html, body, main {
-  font-family: 'Helvetica', Roboto,system-ui, Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Sohne-Buch', Roboto,system-ui, Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
   background-image: url("../images/bg/Prediction.jpg");
   background-size: cover;
   background-attachment: fixed;
@@ -15,18 +15,21 @@ html, body, main {
   background-repeat: no-repeat; 
   display: flex;
   flex-direction: column;
-  background-color: rgba(0, 0, 0, 0.80);
+  background-color: rgb(134, 119, 87);
+  animation: zoomBackground 0.5s;
+  user-select: none;
 }
 
-/* #section_1 {
-  flex: 1;
-} */
 header{
-  font-size: 20px;
+  font-size: 15px;
+  text-shadow: rgba(0, 0, 0, 0.9) 1px 0 10px; 
+}
+h1{
+  font-size: 50px;
 }
 
 .nav-link:hover {
-  color: #fff !important; /* Cambia el color del texto a blanco */
+  color: #fff !important;
 }
 
 #home {
@@ -55,4 +58,14 @@ header{
 
 .animationContent{
   animation: scaleIn 0.5s ease forwards;
+}
+
+@keyframes zoomBackground {
+  from {
+    background-size: 110%;
+  }
+  to {
+    background-size: 100%;
+    filter: blur(1px);
+  }
 }

@@ -1,10 +1,10 @@
 @font-face {
-  font-family: Helvetica;
-  src: url(../fonts/HelveticaNowDisplay-Medium.woff);
+  font-family: Sohne-Buch;
+  src: url(../fonts/Sohne-Buch.woff);
 }
 
 html, body, main {
-  font-family: 'Helvetica', Roboto,system-ui, Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Sohne-Buch', Roboto,system-ui, Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
   background-image: url("../images/bg/OrishaColor.jpg");
   background-size: cover;
   background-attachment: fixed;
@@ -15,12 +15,28 @@ html, body, main {
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
-  background-color: rgba(0, 0, 0, 0.80);
-  /* font-size: x-large; */
+  background-color: rgb(78, 52, 18);
+  animation: zoomBackground 0.5s;
+  user-select: none;
 }
 
 header{
-  font-size: 20px;
+  font-size: 15px;
+  text-shadow: rgba(0, 0, 0, 0.9) 1px 0 10px; 
+  
+}
+p{
+  text-align: center;
+  text-shadow: rgba(0, 0, 0, 0.9) 1px 0 10px; 
+}
+
+@media (min-width: 60rem) {
+  p {
+      font-size: 3.37125rem;
+      line-height: 110%;
+      letter-spacing: -.02em;
+      font-weight: 400;
+  }
 }
 
 .nav-link:hover {
@@ -54,3 +70,20 @@ header{
 .animationContent{
   animation: scaleIn 0.5s ease forwards;
 }
+
+@keyframes zoomBackground {
+  from {
+    background-size: 110%;
+  }
+  to {
+    background-size: 100%;
+    filter: blur(1px);
+  }
+}
+
+/* 
+#conCenter{
+  background-color: rgba(151, 148, 148, 0.39);
+  backdrop-filter: blur(20px);
+  border-radius: 10px;
+} */

@@ -17,7 +17,7 @@
 
   <body>
 
-      <main >
+      <main>
 
         <header class="p-3 animationContent">
           <ul class="nav justify-content-center">
@@ -34,16 +34,17 @@
         </header>
 
         <div class="d-flex justify-content-center align-items-center vh-100 animationContent">      
-          <div class="content m-0 row justify-content-center align-items-center">
-            <h1 class="text-white container d-flex justify-content-center align-items-center">A Classification of Latin music for </h1>
+          <div class="content m-0 row justify-content-center align-items-center" id="conCenter">
+            <p class="text-white container d-flex justify-content-center align-items-center">Classify your Latin music for</p>
             <div class="content__container">          
               <ul class="content__container__list">
-                <li class="content__container__list__item">SALSA!</li>
+                <li  class="content__container__list__item">SALSA!</li>
                 <li class="content__container__list__item">MERENGUE!</li>
                 <li class="content__container__list__item">BACHATA!</li>
                 <li class="content__container__list__item">REGGEATON!</li>
               </ul>
             </div>
+            <a href="{{url_for('classify')}}" class="d-flex justify-content-center" style="width: 180px; height: 130px;"><button type="button" class="m-5 btn btn-success" style="width: 100px;">GO!</button></a>
           </div>     
         </div>
 

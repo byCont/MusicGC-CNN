@@ -19,6 +19,19 @@ html, body, main {
   animation: zoomBackground 0.5s;
   user-select: none;
 }
+.noise::before {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  content: "";
+  opacity: 0.1;  
+  z-index: 1000;
+  pointer-events: none;
+  background: url(../images/bg/Smoke.gif) center center no-repeat;
+  background-size: cover;
+}
 
 header{
   font-size: 15px;

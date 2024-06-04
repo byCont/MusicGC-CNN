@@ -5,7 +5,7 @@
 
 html, body, main {
   font-family: 'Sohne-Buch', Roboto,system-ui, Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
-  background-image: url("../images/bg/OrishaColor.jpg");
+  background-image: url("../images/bg/Home.jpg");
   background-size: cover;
   background-attachment: fixed;
   height: 100%;
@@ -20,14 +20,28 @@ html, body, main {
   user-select: none;
 }
 
+.noise::before {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  content: "";
+  opacity: 0.013;  
+  z-index: 1000;
+  pointer-events: none;
+  background: url(../images/bg/noise.gif) center center no-repeat;
+  background-size: cover; 
+}
+
 header{
   font-size: 15px;
-  text-shadow: rgba(0, 0, 0, 0.9) 1px 0 10px; 
+  /* text-shadow: rgba(0, 0, 0, 0.9) 1px 0 10px; 
+  backdrop-filter: blur(10px); */
   
 }
 p{
   text-align: center;
-  text-shadow: rgba(0, 0, 0, 0.9) 1px 0 10px; 
 }
 
 @media (min-width: 60rem) {
@@ -68,7 +82,8 @@ p{
 }
 
 .animationContent{
-  animation: scaleIn 0.5s ease forwards;
+  animation: scaleIn 0.5s ease forwards;   
+  backdrop-filter: blur(5px); 
 }
 
 @keyframes zoomBackground {
@@ -80,10 +95,3 @@ p{
     filter: blur(1px);
   }
 }
-
-/* 
-#conCenter{
-  background-color: rgba(151, 148, 148, 0.39);
-  backdrop-filter: blur(20px);
-  border-radius: 10px;
-} */

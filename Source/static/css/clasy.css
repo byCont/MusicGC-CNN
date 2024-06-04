@@ -5,7 +5,7 @@
 
 html, body, main {
   font-family: 'Sohne-Buch', Roboto,system-ui, Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
-  background-image: url("../images/bg/HedPhone.jpg");
+  background-image: url("../images/bg/Preview.jpg");
   background-size: cover;
   background-attachment: fixed;
   height: 100%;
@@ -18,6 +18,20 @@ html, body, main {
   background-color: rgb(17, 29, 44);
   animation: zoomBackground 0.5s;
   user-select: none;
+}
+
+.noise::before {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  content: "";
+  opacity: 0.1;  
+  z-index: 1000;
+  pointer-events: none;
+  background: url(../images/bg/Smoke.gif) center center no-repeat;
+  background-size: cover;
 }
 
 header{

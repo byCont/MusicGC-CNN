@@ -9,37 +9,55 @@
   left: 50%;
   transform: translate(-50%, -50%);
   overflow: hidden;
-  font-size: 38px;
-  line-height: 40px;
+  font-size: 50px; /* Aumentado */
+  line-height: 55px; /* Aumentado */
   color: #ecf0f1;
 }
+
 .content__container {
   overflow: hidden;
-  height: 40px;
+  height: 55px; /* Aumentado para coincidir con la nueva line-height */
   padding: 0 40px;
-  font-size: 50px;
+  font-size: 70px; /* Aumentado */
 }
+
 .content__container:before {
   content: "[";
   left: 0;
 }
+
 .content__container:after {
   content: "]";
   position: absolute;
   right: 0;
 }
-.content__container:after, .content__container:before {
+
+.content__container:after,
+.content__container:before {
   position: absolute;
   top: 0;
   color: rgba(0, 153, 255, 0.274);
-  font-size: 120px;
-  line-height: 110px;
-  -webkit-animation-name: opacity;
+  font-size: 140px; /* Aumentado */
+  line-height: 100px; /* Aumentado */
+  /* -webkit-animation-name: opacity; */
   -webkit-animation-duration: 3s;
   -webkit-animation-iteration-count: infinite;
   animation-name: opacity;
   animation-duration: 3s;
   animation-iteration-count: infinite;
+  animation: changeColor 10s infinite;
+}
+
+.btn:after,
+.btn:before {
+  animation: changeColor 10s infinite;
+  -webkit-animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
+  animation-name: opacity;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation: changeColor 10s infinite;
+  
 }
 
 .content__container__list {
@@ -53,42 +71,17 @@
   animation-duration: 10s;
   animation-iteration-count: infinite;
 }
+
 .content__container__list__item {
-  line-height: 40px;
+  line-height: 55px; 
   margin: 0;
   font-weight: 600;
   letter-spacing: 0.8rem;
-  /* font-family: 'Roboto', sans-serif; */
+  animation: changeColor 10s infinite;
 }
 
-@-webkit-keyframes opacity {
-  0%, 100% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-}
-@-webkit-keyframes change {
-  0%, 12.66%, 100% {
-    transform: translate3d(0, 0, 0);
-  }
-  16.66%, 29.32% {
-    transform: translate3d(0, -25%, 0);
-  }
-  33.32%, 45.98% {
-    transform: translate3d(0, -50%, 0);
-  }
-  49.98%, 62.64% {
-    transform: translate3d(0, -75%, 0);
-  }
-  66.64%, 79.3% {
-    transform: translate3d(0, -50%, 0);
-  }
-  83.3%, 95.96% {
-    transform: translate3d(0, -25%, 0);
-  }
-}
+
+/* 
 @keyframes opacity {
   0%, 100% {
     opacity: 0;
@@ -96,7 +89,8 @@
   50% {
     opacity: 1;
   }
-}
+} */
+
 @keyframes change {
   0%, 12.66%, 100% {
     transform: translate3d(0, 0, 0);
@@ -128,21 +122,13 @@
   40% {
     color: #f90;
   }
-  
   60% {
     color: rgb(255, 0, 0); 
   }
   80% {
     color: rgb(88, 0, 204);
   }
-
   100% {
     color: #09f;
   }
-
-}
-
-
-.content__container__list__item {
-  animation: changeColor 10s infinite; 
 }
